@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Gothic+Round:wght@400;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nanum Gothic Round", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-yellow: #FFD700;
+  --color-brand-yellow-light: #FFEB3B;
+  --color-brand-yellow-dark: #F9A825;
+  --color-brand-green: #4CAF50;
+  --color-brand-green-dark: #2E7D32;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-amber-50/30;
+  }
+}

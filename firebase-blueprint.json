@@ -1,0 +1,41 @@
+{
+  "entities": {
+    "ConsultationRequest": {
+      "title": "Consultation Request",
+      "description": "A request for internet subscription consultation",
+      "type": "object",
+      "properties": {
+        "carrier": {
+          "type": "string",
+          "enum": ["KT", "SK", "LG", "None"],
+          "description": "Current carrier"
+        },
+        "name": {
+          "type": "string",
+          "description": "User's name"
+        },
+        "phone": {
+          "type": "string",
+          "description": "User's phone number"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the request was created"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["pending", "contacted", "completed"],
+          "description": "Status of the consultation"
+        }
+      },
+      "required": ["carrier", "name", "phone", "createdAt", "status"]
+    }
+  },
+  "firestore": {
+    "consultations/{consultationId}": {
+      "schema": "ConsultationRequest",
+      "description": "Collection of internet consultation requests"
+    }
+  }
+}
